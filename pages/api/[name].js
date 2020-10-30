@@ -12,6 +12,6 @@ export default (req, res) => {
   } else if (/bob/i.test(name)) {
     fs.createReadStream(imageDirectory + "bob.jpg").pipe(res);
   } else {
-    res.send(404).json({ "I am so sorry": "Cat not found" });
+    res.status(404).json({ "I am so sorry": "Cat not found" });
   }
 };
